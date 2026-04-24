@@ -1,0 +1,28 @@
+# 🌍 Eco-Watch: Real-Time Environmental Dashboard
+
+A fully automated CI/CD pipeline project that deploys a real-time monitoring dashboard for environmental data (Temperature & Humidity).
+
+## 🚀 Features
+- **Real-time Updates:** Interactive dashboard to view and update environment metrics.
+- **Automated CI/CD:** Powered by Jenkins and GitHub Webhooks.
+- **Containerization:** Built and deployed using Docker for consistency.
+- **Cloud Infrastructure:** Hosted on AWS EC2.
+
+## 🛠️ Tech Stack
+- **Frontend:** HTML5, CSS3, JavaScript
+- **CI/CD:** Jenkins
+- **Containerization:** Docker
+- **Infrastructure:** AWS (EC2)
+- **Version Control:** GitHub
+
+## 🔄 How the Pipeline Works
+1. **Developer Commits Code:** Any change in GitHub triggers a signal via **Webhooks**.
+2. **Jenkins Automation:** Jenkins detects the change, clones the repo, and builds a new **Docker Image**.
+3. **Deployment:** Jenkins stops the old container and runs the new one on the **AWS EC2** instance.
+4. **Live Access:** The updated dashboard is immediately available to users via the Public IP.
+
+## 📸 Dashboard Preview
+Currently hosted at: `http://18.117.174.92` (Check Public IP for live view)
+
+---
+*Developed as part of DevOps & Cloud Computing Learning Journey.*
