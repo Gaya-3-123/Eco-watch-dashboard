@@ -2,24 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Smart Vaniyambadi Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Watch Dashboard</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #0f172a; color: #f8fafc; text-align: center; padding-top: 50px; }
-        .box { background: #1e293b; padding: 20px; border-radius: 15px; display: inline-block; width: 300px; margin: 10px; border: 1px solid #334155; }
-        .value { font-size: 2.5em; font-weight: bold; color: #38bdf8; }
-        .label { color: #94a3b8; margin-top: 10px; }
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; padding: 20px; }
+        .dashboard { background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .input-section { margin-top: 30px; padding: 20px; background: #e8f5e9; border-radius: 10px; }
+        input { padding: 10px; margin: 5px; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px 20px; background: #2e7d32; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #1b5e20; }
+        .data-display { font-size: 24px; font-weight: bold; color: #2e7d32; margin: 10px; }
     </style>
 </head>
 <body>
-    <h1>🌍 Live Atmosphere Monitor</h1>
-    <div class="box">
-        <div id="temp" class="value">Loading...</div>
-        <div class="label">Temperature (Vaniyambadi)</div>
+
+    <div class="dashboard">
+        <h1>Eco-Watch Live Monitoring</h1>
+        <div class="data-display">
+            Temperature: <span id="tempDisplay">28</span>°C
+        </div>
+        <div class="data-display">
+            Humidity: <span id="humidityDisplay">65</span>%
+        </div>
+
+        <div class="input-section">
+            <h3>Update Live Data</h3>
+            <input type="number" id="tempInput" placeholder="Temperature (°C)">
+            <input type="number" id="humidityInput" placeholder="Humidity (%)">
+            <br>
+            <button onclick="updateDashboard()">Update Live</button>
+        </div>
     </div>
-    <div class="box">
-        <div id="members" class="value">0</div>
-        <div class="label">Members in Area</div>
-    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
